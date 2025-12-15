@@ -1,6 +1,7 @@
 resource "google_project" "n8n_project" {
   name       = local.project_name
   project_id = local.project_name
+  org_id     = "YOUR-ORG-ID"
 }
 
 output "n8n_project_id" {

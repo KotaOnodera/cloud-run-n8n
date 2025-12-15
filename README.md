@@ -47,6 +47,7 @@ Terraform 実行前に、以下のファイル内の変数を編集してくだ�
 ```hcl
 locals {
   project_name = "YOUR-PROJECT-NAME"  # GCPプロジェクト名
+  org_id       = "YOUR-ORG-ID"        # GCP組織ID
 }
 ```
 
