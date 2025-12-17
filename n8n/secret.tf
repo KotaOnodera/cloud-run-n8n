@@ -27,3 +27,16 @@ resource "google_secret_manager_secret_version" "n8n_encryption_key_secret_versi
   secret      = google_secret_manager_secret.n8n_encryption_key_secret.id
   secret_data = random_password.encryption_key.result
 }
+
+# Create a random password for the database user
+resource "random_password" "db_password" {
+  length  = 16
+  special = true
+}
+
+# Create a random encryption key
+resource "random_password" "encryption_key" {
+  length  = 42
+  special = true
+}
+

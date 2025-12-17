@@ -1,15 +1,3 @@
-# Create a random password for the database user
-resource "random_password" "db_password" {
-  length  = 16
-  special = true
-}
-
-# Create a random encryption key
-resource "random_password" "encryption_key" {
-  length  = 42
-  special = true
-}
-
 # Create the Cloud SQL for PostgreSQL instance
 resource "google_sql_database_instance" "n8n_db_instance" {
   name             = "n8n-db"
