@@ -41,18 +41,18 @@ resource "google_cloud_run_v2_service" "n8n" {
           port = 5678
         }
       }
-      env {
-        name  = "N8N_HOST"
-        value = local.n8n_host
-      }
-      env {
-        name  = "WEBHOOK_URL"
-        value = local.n8n_base_url
-      }
-      env {
-        name  = "N8N_EDITOR_BASE_URL"
-        value = local.n8n_base_url
-      }
+      # env {
+      #   name  = "N8N_HOST"
+      #   value = local.n8n_host
+      # }
+      # env {
+      #   name  = "WEBHOOK_URL"
+      #   value = local.n8n_base_url
+      # }
+      # env {
+      #   name  = "N8N_EDITOR_BASE_URL"
+      #   value = local.n8n_base_url
+      # }
       env {
         name  = "N8N_PORT"
         value = "5678"
