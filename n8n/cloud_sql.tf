@@ -30,14 +30,14 @@ resource "google_sql_database_instance" "n8n_db_instance" {
   deletion_protection = false
 }
 
-# Create the terra-n8n database
+# Create the n8n database
 resource "google_sql_database" "n8n_database" {
   name     = "n8n"
   project  = local.project_id
   instance = google_sql_database_instance.n8n_db_instance.name
 }
 
-# Create the terra-n8n database user
+# Create the n8n database user
 resource "google_sql_user" "n8n_user" {
   name     = "n8n-user"
   project  = local.project_id
